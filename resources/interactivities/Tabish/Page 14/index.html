@@ -11,14 +11,13 @@
 	<script  src="https://code.jquery.com/jquery-3.6.3.js" ></script>
 </head>
 <body>
-		<br>
 <div class="field">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
 				<h4>
 					<img onclick="play()" src="img/speaker.png" class="speaker" >
-					Name each picture. Colour the correct box.
+					Look at each picture. Colour the correct box.
 				</h4>
 			</div>
 		</div>
@@ -26,38 +25,44 @@
 		<div class="row canvas">
 			<div class="col-md-6">
 				<center>
-				<img src="img/1.jpg" class="ques_image"><br>
+				<img src="img/1.png" class="ques_image"><br>
 				<div class="answers">
-					<input type="text" readonly id="11" onclick="go(this.id)" value="a">
-					<input type="text" readonly id="1" onclick="go(this.id)" value="an">
+					<input type="text" readonly id="1" onclick="go(this.id)" value="one clock">
+					<input type="text" readonly id="11" onclick="go(this.id)" value="many clocks">
 					<img src="img/tick.png" class="t_1 hidden" style="width:40px;"><img src="img/cross.png" class="c_1 hidden" style="width:40px;"></div>
 				</center>
 			</div>
 			<div class="col-md-6">
 				<center>
-				<img src="img/2.jpg" class="ques_image"><br>
+				<img src="img/2.png" class="ques_image"><br>
 				<div class="answers">
-					<input type="text" readonly id="2" onclick="go(this.id)" value="a">
-					<input type="text" readonly id="12" onclick="go(this.id)" value="an">
-					<img src="img/tick.png" class="t_2 hidden" style="width:40px;"><img src="img/cross.png" class="c_2 hidden" style="width:40px;"></div>
+					<input type="text" readonly id="12" onclick="go(this.id)" value="one toy">
+					<input type="text" readonly id="2" onclick="go(this.id)" value="many toys">
+					<img src="img/tick.png" class="t_2 hidden" style="width:40px;">
+					<img src="img/cross.png" class="c_2 hidden" style="width:40px;">
+				</div>
 				</center>
 			</div>
 			<div class="col-md-6">
 				<center>
-				<img src="img/3.jpg" class="ques_image"><br>
+				<img src="img/3.png" class="ques_image"><br>
 				<div class="answers">
-					<input type="text" readonly id="3" onclick="go(this.id)" value="a">
-					<input type="text" readonly id="13" onclick="go(this.id)" value="an">
-					<img src="img/tick.png" class="t_3 hidden" style="width:40px;"><img src="img/cross.png" class="c_3 hidden" style="width:40px;"></div>
+					<input type="text" readonly id="13" onclick="go(this.id)" value="one chairs">
+					<input type="text" readonly id="3" onclick="go(this.id)" value="many chairs">
+					<img src="img/tick.png" class="t_3 hidden" style="width:40px;">
+					<img src="img/cross.png" class="c_3 hidden" style="width:40px;">
+				</div>
 				</center>
 			</div>
 			<div class="col-md-6">
 				<center>
-				<img src="img/4.jpg" class="ques_image"><br>
+				<img src="img/4.png" class="ques_image"><br>
 				<div class="answers">
-					<input type="text" readonly id="14" onclick="go(this.id)" value="a">
-					<input type="text" readonly id="4" onclick="go(this.id)" value="an">
-					<img src="img/tick.png" class="t_4 hidden" style="width:40px;"><img src="img/cross.png" class="c_4 hidden" style="width:40px;"></div>
+					<input type="text" readonly id="4" onclick="go(this.id)" value="one tree">
+					<input type="text" readonly id="14" onclick="go(this.id)" value="many trees">
+					<img src="img/tick.png" class="t_4 hidden" style="width:40px;">
+					<img src="img/cross.png" class="c_4 hidden" style="width:40px;">
+				</div>
 				</center>
 			</div>
 		</div>
@@ -78,7 +83,7 @@
 </div>
 <audio src="audio/well-done.mp3" id="audio1"></audio>
 <audio src="audio/try-again.mp3" id="audio2"></audio>
-<audio src="audio/Page-7.mp3" id="audio3"></audio>
+<audio src="audio/Page-14.mp3" id="audio3"></audio>
 </body>
 <script src="main.js"></script>
 </html>
