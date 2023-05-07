@@ -108,3 +108,12 @@ function go(a){
 		t++;
 	}
 }
+function bo(a){
+
+	b = a+10;
+	c = b+100;
+	$('#'+c).css('color','black');
+	$('#'+b).css('color','black');
+	$('#'+a).css('color','green');
+	$('#'+a).css('border','5px solid green');
+}
