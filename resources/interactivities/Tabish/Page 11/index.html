@@ -1,0 +1,154 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Left or right</title>
+	<link href="styles.css" type="text/css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	<script  src="https://code.jquery.com/jquery-3.6.3.js" ></script>
+</head>
+<body>
+		<br>
+<div class="field">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<h4>
+					<img onclick="play()" src="img/speaker.png" class="speaker" >
+					<!--<span style="color:#66AE3D;">Left or right— </span> -->
+					Colour the left objects in left box and right objects in right box.
+				</h4>
+			</div>
+		</div>
+	</div>
+		<br>
+	<div class="container-fluid">
+		<div class="mains">
+		<div class="row canvas">
+			<div class="col-md-5">
+				<div class="row left">
+					<div class="col-md-4">
+						<center><div class="answers"><img src="img/tick.png" class="t_l hidden" style="width:40px;"></div></center>
+					</div>
+					<div class="col-md-4">
+						<center>
+							<img src="img/left.png" class="title_img">
+						</center>
+					</div>
+					<div class="col-md-4">
+						<center><div class="answers"><img src="img/cross.png" class="c_l hidden" style="width:40px;"></div></center>
+					</div>
+					<div class="col-md-6 left_pair1">
+						<center>
+						<img src="img/l_1.1.png" class="ques_image" id="1" onclick="go(this.id)">
+						<img src="img/lp_1.1.png" class="ques_image hidden" id="lp1">
+						</center>
+					</div>
+					<div class="col-md-6 left_pair1">
+						<center>
+						<img src="img/l_1.2.png" class="ques_image" id="10" onclick="go(this.id)">
+						<img src="img/lp_1.2.png" class="ques_image hidden" id="lp10">
+						</center>
+					</div>
+					<div class="col-md-6 left_pair2 hidden">
+						<center>
+						<img src="img/l_2.1.png" class="ques_image" id="2" onclick="go(this.id)">
+						<img src="img/lp_2.1.png" class="ques_image hidden" id="lp2">
+						</center>
+					</div>
+					<div class="col-md-6 left_pair2 hidden">
+						<center>
+						<img src="img/l_2.2.png" class="ques_image" id="11" onclick="go(this.id)">
+						<img src="img/lp_2.2.png" class="ques_image hidden" id="lp11">
+						</center>
+					</div>
+					<div class="col-md-6 left_pair3 hidden">
+						<center>
+						<img src="img/l_3.1.png" class="ques_image" id="3" onclick="go(this.id)">
+						<img src="img/lp_3.1.png" class="ques_image hidden" id="lp3">
+						</center>
+					</div>
+					<div class="col-md-6 left_pair3 hidden">
+						<center>
+						<img src="img/l_3.2.png" class="ques_image" id="l2" onclick="go(this.id)">
+						<img src="img/lp_3.2.png" class="ques_image hidden" id="lp12">
+						</center>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-5">
+				<div class="row right">
+					<div class="col-md-4">
+						<center><div class="answers"><img src="img/cross.png" class="c_r hidden" style="width:40px;"></div></center>
+					</div>
+					<div class="col-md-4">
+						<center>
+							<img src="img/right.png" class="title_img">
+						</center>
+					</div>
+					<div class="col-md-4">
+						<center><div class="answers"><img src="img/tick.png" class="t_r hidden" style="width:40px;"></div></center>
+					</div>
+					<div class="col-md-6 right_pair1">
+						<center>
+						<img src="img/r_1.1.png" class="ques_image" id="13" onclick="go(this.id)">
+						<img src="img/rp_1.1.png" class="ques_image hidden" id="lp13">
+						</center>
+					</div>
+					<div class="col-md-6 right_pair1">
+						<center>
+						<img src="img/r_1.1.png" class="ques_image" id="4" onclick="go(this.id)">
+						<img src="img/rp_1.1.png" class="ques_image hidden" id="lp4">
+						</center>
+					</div>
+					<div class="col-md-6 right_pair2 hidden">
+						<center>
+						<img src="img/r_2.1.png" class="ques_image" id="14" onclick="go(this.id)">
+						<img src="img/rp_2.1.png" class="ques_image hidden" id="lp14">
+						</center>
+					</div>
+					<div class="col-md-6 right_pair2 hidden">
+						<center>
+						<img src="img/r_2.2.png" class="ques_image" id="5" onclick="go(this.id)">
+						<img src="img/rp_2.2.png" class="ques_image hidden" id="lp5">
+						</center>
+					</div>
+					<div class="col-md-6 right_pair3 hidden">
+						<center>
+						<img src="img/r_3.1.png" class="ques_image" id="l5" onclick="go(this.id)">
+						<img src="img/rp_3.1.png" class="ques_image hidden" id="lp15">
+						</center>
+					</div>
+					<div class="col-md-6 right_pair3 hidden">
+						<center>
+						<img src="img/r_3.2.png" class="ques_image" id="6" onclick="go(this.id)">
+						<img src="img/rp_3.2.png" class="ques_image hidden" id="lp6">
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-4"><center><img id="submit" onclick="check()" src="img/submit.png" style="margin-top:10px; width:50%;"></center></div>
+			<div class="col-md-4"><center><img id="sol" onclick="solve()" src="img/answer.png" style="margin-top:10px; width:50%;"></center></div>
+			<div class="col-md-4"><center><img id="reset" onclick="window.location.reload()" src="img/reset.png" style="margin-top:10px; width:50%;"></center></div>
+		</div>
+		</div>
+	</div>
+</div>
+<div id="blocks" style="display:none; margin-top:-300px; z-index:99;">
+	<center><img src="img/Welldone.gif" id="welldone"></center>
+</div>
+<div id="blocks2" style="display:none; margin-top:-300px; z-index:99;">
+	<center><img src="img/TryAgain.gif" style="width:300px;"></center>
+</div>
+<audio src="audio/well-done.mp3" id="audio1"></audio>
+<audio src="audio/try-again.mp3" id="audio2"></audio>
+<audio src="audio/Page-85.mp3" id="audio3"></audio>
+</body>
+<script src="main.js"></script>
+</html>
