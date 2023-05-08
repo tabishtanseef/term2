@@ -4,46 +4,55 @@
 <head>
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title></title>
+	<title>Colourful dots</title>
 	<link href="styles.css" type="text/css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 	<script  src="https://code.jquery.com/jquery-3.6.3.js" ></script>
 </head>
 <body>
+	<br>
 <div class="field">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
 				<h4>
 					<img onclick="play()" src="img/speaker.png" class="speaker" >
-					Look at the pictures and read the questions. Colour the correct boxes.
+					Drag (<span class="let">✔</span>) for the animal which runs fast and cross (<span class="let">✗</span>) for the one which is slow.
 				</h4>
 			</div>
 		</div>
-		<br>
-		<div class="mains">
-		<div class="row canvas">
-			<div class="col-md-12">
-				<center>
-				<h4>Where is the boy?</h4>
-				<div class="answers">
-					on the <input type="text" readonly id="1" onclick="go(this.id)" value="top"> <input type="text" readonly id="11" onclick="go(this.id)" value="behind"> <img src="img/tick.png" class="t_1 hidden" style="width:40px;"><img src="img/cross.png" class="c_1 hidden" style="width:40px;">
-				</div>
-				<img src="img/1.jpg" class="ques_image">
-				<h4>Where is the girl?</h4>
-				<div class="answers">
-					at the <input type="text" readonly id="2" onclick="go(this.id)" value="bottom"> <input type="text" readonly id="12" onclick="go(this.id)" value="behind"> <img src="img/tick.png" class="t_2 hidden" style="width:40px;"><img src="img/cross.png" class="c_2 hidden" style="width:40px;">
-				</div>
+	</div>
+	<br><br>
+	<div class="container">
+		<div class="row ques_1">
+			<div class="col-md-4" style="text-align:center; margin:auto;">
+				<center class="tex">
+					<img src="img/1.jpg" class="ques_image" >
+					<div id="2" onclick="go(this.id)" class="box" ondrop="drop2(event)" ondragover="allowDrop(event)"> 
+						<img src="img/cross.png" class="answers hidden">
+					</div>
 				</center>
 			</div>
+			<div class="col-md-4" style="text-align:center; margin:auto;">
+				<center class="tex">
+					<img src="img/2.jpg" class="ques_image" >
+					<div id="4" onclick="go(this.id)" class="box" ondrop="drop1(event)" ondragover="allowDrop(event)">
+						<img src="img/tick.png" class="answers hidden">
+					</div>
+				</center>
+			</div>
+			<div class="col-md-4" class="aa" style="padding:10px; text-align:center;"><br>
+				<img src="img/tick.png" class="ans" id="drag2" draggable="true" ondragstart="drag(event)"><br><br>
+				<img src="img/cross.png" class="ans" id="drag1" draggable="true" ondragstart="drag(event)">
+			</div>
 		</div>
+		<br>
 		<br>
 		<div class="row">
 			<div class="col-md-4"><center><img id="submit" onclick="check()" src="img/submit.png" style="margin-top:10px; width:50%;"></center></div>
 			<div class="col-md-4"><center><img id="sol" onclick="solve()" src="img/answer.png" style="margin-top:10px; width:50%;"></center></div>
 			<div class="col-md-4"><center><img id="reset" onclick="window.location.reload()" src="img/reset.png" style="margin-top:10px; width:50%;"></center></div>
-		</div>
 		</div>
 	</div>
 </div>
@@ -55,7 +64,7 @@
 </div>
 <audio src="audio/well-done.mp3" id="audio1"></audio>
 <audio src="audio/try-again.mp3" id="audio2"></audio>
-<audio src="audio/Page-30.mp3" id="audio3"></audio>
+<audio src="audio/Page-19.mp3" id="audio3"></audio>
 </body>
 <script src="main.js"></script>
 </html>
