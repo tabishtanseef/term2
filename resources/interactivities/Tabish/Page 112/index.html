@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Match the following</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/mtf.css" />
+
+	<script src="assets/js/data.js" type="text/javascript"></script>
+	<script src="assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="assets/js/app.mtf.js" type="text/javascript"></script>
+	<script src="assets/js/mtf.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="container" id="cont2">
+			<section class="content">
+				<div class="body-container">
+					<div class="question-n">
+						<div class="sub-header">
+							<img onClick="playHead()" src="./assets/img/speaker.png" class="speaker">
+							<h4 class="title-h4" id="app-instruction"></h4>
+						</div>
+
+						<div class="question-section">
+							<div class="welldone" id="welldone"><img src="./assets/img/welldone.gif"width="250px" height="250px" alt=""></div>
+							<div class="tryagain" id="tryagain"><img src="./assets/img/tryagain.png" alt=""></div>
+							<!--Wrapper Start-->
+							<div id="mainWrapper">
+								<div class="">
+									<div class="leftSide div1" id="dvLeft"></div>
+									<div class="rightSide div1" id="dvRight"></div>
+									<div class="clear"></div>
+								</div>
+
+
+								<span id="main_span"
+									style="position:absolute; left:0;top:0; width:0px; height:0px;"></span>
+
+
+								<div class="clearfix"></div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+
+						<div class="feedbackImg">
+							<div class="feedback-container" id="feedback-box">
+
+							</div>
+						</div>
+						<footer class="footer">
+							<div class="button-wrapper">
+								<button disabled id="submitAns" class="btn btn-primary"></button>
+								<button disabled id="showAns" class="btn btn-primary"></button>
+								<button id="btn-reset" onclick="window.location.reload();"
+									class="btn btn-primary"></button>
+								<button disabled id="btn-next" class="btn btn-primary">Next</button>
+
+							</div>
+						</footer>
+						<div class="clearfix"></div>
+					</div>
+			</section>
+
+		</div>
+	</div>
+	</div>
+	<div class="modal" id="modal-feedback">
+		<div class="modal-container">
+			<div class="modal-content">
+				<p id="feedback-text" class="feedback-text"></p>
+			</div>
+			<!-- <button class="btn btn-primary" onClick="closeModal('modal-feedback')">Close</button> -->
+		</div>
+	</div>
+
+	<div id="myblocker"></div>
+</body>
+
+</html>

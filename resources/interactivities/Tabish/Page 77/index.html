@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title></title>
+	<link href="styles.css" type="text/css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.js" ></script>
+</head>
+<body>
+<div class="container-fluid" >
+	<div class="row">
+		<div class="col-md-12">
+			<h4><img onclick="play()" src="img/speaker.png" class="speaker" >
+			Look at the numbers. Copy and write the number names.
+			</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r1">1</div>
+				</div>
+				<div class="col-md-3">
+					<div class="n n1">one</div>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r1">1</div>
+				</div>
+				<div class="col-md-3">
+					<input type="text" id="1" class="boxy" autocomplete="off" >
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r2">3</div>
+				</div>
+				<div class="col-md-3">
+					<div class="n n2">three</div>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r2">3</div>
+				</div>
+				<div class="col-md-3">
+					<input type="text" id="2" class="boxy" autocomplete="off" >
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r3">6</div>
+				</div>
+				<div class="col-md-3">
+					<div class="n n3">six</div>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r3">6</div>
+				</div>
+				<div class="col-md-3">
+					<input type="text" id="3" class="boxy" autocomplete="off" >
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r4">9</div>
+				</div>
+				<div class="col-md-3">
+					<div class="n n4">nine</div>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r4">9</div>
+				</div>
+				<div class="col-md-3">
+					<input type="text" id="4" class="boxy" autocomplete="off" >
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r1">10</div>
+				</div>
+				<div class="col-md-3">
+					<div class="n n1">ten</div>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r1">10</div>
+				</div>
+				<div class="col-md-3">
+					<input type="text" id="5" class="boxy" autocomplete="off" >
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r2">12</div>
+				</div>
+				<div class="col-md-3">
+					<div class="n n2">twelve</div>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r2">12</div>
+				</div>
+				<div class="col-md-3">
+					<input type="text" id="6" class="boxy" autocomplete="off" >
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r3">15</div>
+				</div>
+				<div class="col-md-3">
+					<div class="n n3">fifteen</div>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r3">15</div>
+				</div>
+				<div class="col-md-3">
+					<input type="text" id="7" class="boxy" autocomplete="off" >
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r4">20</div>
+				</div>
+				<div class="col-md-3">
+					<div class="n n4">twenty</div>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-2">
+					<div class="r r4">20</div>
+				</div>
+				<div class="col-md-3">
+					<input type="text" id="8" class="boxy" autocomplete="off" >
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4"><center><img id="submit" onclick="check()" src="img/submit.png" style="margin-top:10px; width:50%;"></center></div>
+		<div class="col-md-4"><center><img id="sol" onclick="solve()" src="img/answer.png" style="margin-top:10px; width:50%;"></center></div>
+		<div class="col-md-4"><center><img id="reset" onclick="window.location.reload()" src="img/reset.png" style="margin-top:10px; width:50%;"></center></div>
+	</div>
+</div>
+<div id="blocks" style="display:none; margin-top:-400px; z-index:99;">
+	<center><img src="img/Welldone.gif" id="welldone"></center>
+</div>
+<div id="blocks2" style="display:none; margin-top:-400px; z-index:99;">
+	<center><img src="img/TryAgain.gif" style="width:300px;"></center>
+</div>
+<audio src="audio/well-done.mp3" id="audio1"></audio>
+<audio src="audio/try-again.mp3" id="audio2"></audio>
+<audio src="audio/Page-77.mp3" id="audio3"></audio>
+</body>
+<script src="main.js"></script>
+</html>
