@@ -5,30 +5,58 @@ function check(){
 	val4 = $('#4').val();
 	val5 = $('#5').val();
 	val6 = $('#6').val();
+	val7 = $('#7').val();
+	val8 = $('#8').val();
+	val9 = $('#9').val();
+	val10 = $('#10').val();
+	val11 = $('#11').val();
+	val12 = $('#12').val();
+	val13 = $('#13').val();
 	
-	if(val1.toLowerCase()!='second'){
-		$("#1").css('border',"3px solid red");
+	if(val1.toLowerCase()!='o'){
+		$("#1").css('border-bottom',"3px solid red");
 	}
-	if(val2.toLowerCase()!='first'){
-		$("#2").css('border',"3px solid red");
+	if(val2.toLowerCase()!='e'){
+		$("#2").css('border-bottom',"3px solid red");
 	}
-	if(val3.toLowerCase()!='fifth'){
-		$("#3").css('border',"3px solid red");
+	if(val3.toLowerCase()!='u'){
+		$("#3").css('border-bottom',"3px solid red");
 	}
-	if(val4.toLowerCase()!='fourth'){
-		$("#4").css('border',"3px solid red");
+	if(val4.toLowerCase()!='e'){
+		$("#4").css('border-bottom',"3px solid red");
 	}
-	if(val5.toLowerCase()!='third'){
-		$("#5").css('border',"3px solid red");
+	if(val5.toLowerCase()!='k'){
+		$("#5").css('border-bottom',"3px solid red");
 	}
-	if(val6.toLowerCase()!='first'){
-		$("#6").css('border',"3px solid red");
+	if(val6.toLowerCase()!='h'){
+		$("#6").css('border-bottom',"3px solid red");
+	}
+	if(val7.toLowerCase()!='e'){
+		$("#7").css('border-bottom',"3px solid red");
+	}
+	if(val8.toLowerCase()!='c'){
+		$("#8").css('border-bottom',"3px solid red");
+	}
+	if(val9.toLowerCase()!='i'){
+		$("#9").css('border-bottom',"3px solid red");
+	}
+	if(val10.toLowerCase()!='i'){
+		$("#10").css('border-bottom',"3px solid red");
+	}
+	if(val11.toLowerCase()!='a'){
+		$("#11").css('border-bottom',"3px solid red");
+	}
+	if(val12.toLowerCase()!='b'){
+		$("#12").css('border-bottom',"3px solid red");
+	}
+	if(val13.toLowerCase()!='d'){
+		$("#13").css('border-bottom',"3px solid red");
 	}
 	
-	if(val1.toLowerCase()=='second' && val2.toLowerCase()=='first' && val3.toLowerCase()=='fifth' && val4.toLowerCase()=='fourth' && val5.toLowerCase()=='third' && val6.toLowerCase()=='first'){
+	if(val1.toLowerCase()=='o' && val2.toLowerCase()=='e' && val3.toLowerCase()=='u' && val4.toLowerCase()=='e' && val5.toLowerCase()=='k' && val6.toLowerCase()=='h' && val7.toLowerCase()=='e' && val8.toLowerCase()=='c' && val9.toLowerCase()=='i' && val10.toLowerCase()=='i' && val11.toLowerCase()=='a' && val12.toLowerCase()=='b' && val13.toLowerCase()=='d'){
 		i=1;
-		while(i<9){
-			$("#"+i).css('border',"3px solid green");
+		while(i<12){
+			$("#"+i).css('border-bottom',"3px solid green");
 			i++;
 		}
 		$("#sol").css("pointer-events", "auto");
@@ -51,13 +79,20 @@ function play(){
 	audio.play();
 }
 function solve(){
-	$('#1').val('second');
-	$('#2').val('first');
-	$('#3').val('fifth');
-	$('#4').val('fourth');
-	$('#5').val('third');
-	$('#6').val('first');
+	$('#1').val('o');
+	$('#2').val('e');
+	$('#3').val('u');
+	$('#4').val('e');
+	$('#5').val('k');
+	$('#6').val('h');
+	$('#7').val('e');
+	$('#8').val('c');
+	$('#9').val('i');
+	$('#10').val('i');
+	$('#11').val('a');
+	$('#12').val('b');
+	$('#13').val('d');
 	$('#blocks2').hide();
-	$('#submit').css('pointer-events','none');
+	//$('#submit').css('pointer-events','none');
 	$('#submit').css('opacity','0.5');
 }
