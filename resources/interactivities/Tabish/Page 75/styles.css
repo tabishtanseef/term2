@@ -1,68 +1,29 @@
-
 @font-face {
   font-family: "Sehaj";
-  src: url('All Fonts/Sehaj-ENG-SemiBold.otf');
-}
-@font-face {
-  font-family: "Sehaj Bold";
   src: url('All Fonts/Sehaj-ENG-Bold.otf');
 }
-body{
-	margin:0px;
-	padding:10px;
-	background-image:url('img/b1.png');
-	background-size:cover;
-	font-family: "Sehaj" !important;
-}
-h4{
+h5{
 	color:#C529A3 !important;
-	font-family: "Sehaj Bold";
+	font-family: "Sehaj";
 	letter-spacing:1px;
 }
 .let{
 	color:#0166B3;
 }
-.ans{
-	width:45px;
+body{
+	margin:0px;
+	padding:20px;
+	background-image:url('img/b1.jpg');
+	background-size:cover;
 }
-#welldone{
-	width:50%;
+.hidden{
+	display:none;
 }
-.main_image{
-	width:300px;
-}
-.ques_image{
-	width:100%;
-	border:3px solid #FECA0A;
-	border-radius:20px;
-}
-
-.down{
-	padding:5px;
-	background:#FFE191 !important;
-}
-.tex{
-	font-size:20px;
-}
-.box{
-	background:#fff;
-	width:50px !important;
-	height:50px !important;
-	border:3px solid #FECA0A;
-	border-radius:10px;
-	margin-top:5px;
-}
-input{
-	width:50px;
-	padding:10px;
-	border-radius:50%;
-	border:1px solid orange;
-	text-align:center;
+#submit, #reset, #sol{
 	cursor:pointer;
 }
-
-.hidden{
-	display:none !important;
+.canvas{
+	cursor: url(img/brush.png), auto;
 }
 .speaker{
 	width:30px; 
@@ -71,20 +32,50 @@ input{
 	margin-left:10px;
 	cursor:pointer;
 }
-.block {
-    display: block;
-    width: 90%;
-    border: none;
-    background-color: #ffffff8f;
-	font-family:Comic Sans, Comic Sans MS, cursive;
-    padding: 14px 28px;
-    font-size: 26px;
-    cursor: pointer;
-    text-align: center;
-}
 .mains{
-	border-radius:20px;
-	border: 5px dashed #AFAAD3;
+	border-radius:50px;
+	border: 5px dashed #F171AB;
 	background:#fff;
-	padding:10px;
+	padding:20px;
+}
+.tools{
+	
+	margin-top: 15px;
+}
+
+.tools .color-field{
+	height:40px;
+	width:40px;
+	min-height:40px;
+	min-width:40px;
+	cursor:pointer;
+	display:inline-block;
+	box-sizing: border-box;
+	border-radius:50%;
+	border: 2px solid white;
+	align-self: center;
+	
+}
+.tools .button{
+	align-self: center;
+	width: 100px;
+	height: 40px;
+	border: 2px solid white;
+	cursor:pointer;
+	color:white;
+	background:#222;
+	font-weight:bold;
+	margin: 0 10px;
+}
+
+.color-picker{
+	align-self:center;
+	margin: 0 10px;
+	height: 50px;
+}
+
+.pen-range{
+	align-self:center;
+	margin: 0 10px;
+	height: 50px;
 }
