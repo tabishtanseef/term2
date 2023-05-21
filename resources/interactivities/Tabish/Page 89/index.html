@@ -1,0 +1,212 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title></title>
+	<link href="styles.css" type="text/css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	<script  src="https://code.jquery.com/jquery-3.6.3.js" ></script>
+</head>
+<body>
+<div class="field">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h4>
+					<img onclick="play()" src="img/speaker.png" class="speaker" >
+					Look at the shapes given below.
+				</h4>
+				<h5>
+					Colour the circles <span style="color:red;">red</span>, squares <span style="color:#FECA0A;">yellow</span>, triangles <span style="color:purple;">purple</span>, stars <span style="color:orange;">orange</span>, rectangles <span style="color:blue;">blue</span>, ovals black and semicircles <span style="color:green;">green</span>.
+				</h5>
+			</div>
+		</div>
+		<div class="mains">
+		<div class="row">
+			<div class="col-md-1" style="margin:auto;">
+				<div class="box" onclick="choose_color('red',this.id)" id="1" style="background:red;" ></div>
+			</div>
+			<div class="col-md-1" style="margin:auto;">
+				<div class="box" onclick="choose_color('yellow',this.id)" id="2" style="background:#FECA0A;" ></div>
+			</div>
+			<div class="col-md-1" style="margin:auto;">
+				<div class="box" onclick="choose_color('purple',this.id)" id="3" style="background:purple;" ></div>
+			</div>
+			<div class="col-md-1" style="margin:auto;">
+				<div class="box" onclick="choose_color('orange',this.id)" id="4" style="background:orange;" ></div>
+			</div>
+			<div class="col-md-1" style="margin:auto;">
+				<div class="box" onclick="choose_color('blue',this.id)" id="5" style="background:blue;" ></div>
+			</div>
+			<div class="col-md-1" style="margin:auto;">
+				<div class="box" onclick="choose_color('black',this.id)" id="6" style="background:black;" ></div>
+			</div>
+			<div class="col-md-1" style="margin:auto;">
+				<div class="box" onclick="choose_color('green',this.id)" id="7" style="background:green;" ></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/1.png" onclick="fill_color('T',this.id)" id="r111" class="ques_images">
+				<img src="img/10.png" id="r1110" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/2.png" onclick="fill_color('S',this.id)" id="r122" class="ques_images">
+				<img src="img/20.png" id="r1220" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/5.png" onclick="fill_color('R',this.id)" id="r135" class="ques_images">
+				<img src="img/50.png" id="r1350" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/6.png" onclick="fill_color('SC',this.id)" id="r146" class="ques_images">
+				<img src="img/60.png" id="r1460" class="ques_image hidden">
+				</center>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/4.png" onclick="fill_color('O',this.id)" id="r214" class="ques_images">
+				<img src="img/40.png" id="r2140" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/7.png" onclick="fill_color('SR',this.id)" id="r227" class="ques_images">
+				<img src="img/70.png" id="r2270" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/2.png" onclick="fill_color('S',this.id)" id="r232" class="ques_images">
+				<img src="img/20.png" id="r2320" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/4.png" onclick="fill_color('O',this.id)" id="r244" class="ques_images">
+				<img src="img/40.png" id="r2440" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/7.png" onclick="fill_color('SR',this.id)" id="r257" class="ques_images">
+				<img src="img/70.png" id="r2570" class="ques_image hidden">
+				</center>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/3.png" onclick="fill_color('C',this.id)" id="r313" class="ques_images">
+				<img src="img/30.png" id="r3130" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/1.png" onclick="fill_color('T',this.id)" id="r321" class="ques_images">
+				<img src="img/10.png" id="r3210" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/5.png" onclick="fill_color('R',this.id)" id="r335" class="ques_images">
+				<img src="img/50.png" id="r3350" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/3.png" onclick="fill_color('C',this.id)" id="r343" class="ques_images">
+				<img src="img/30.png" id="r3430" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/2.png" onclick="fill_color('S',this.id)" id="r352" class="ques_images">
+				<img src="img/20.png" id="r3520" class="ques_image hidden">
+				</center>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/6.png" onclick="fill_color('SC',this.id)" id="r416" class="ques_images">
+				<img src="img/60.png" id="r4160" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/3.png" onclick="fill_color('C',this.id)" id="r423" class="ques_images">
+				<img src="img/30.png" id="r4230" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/4.png" onclick="fill_color('O',this.id)" id="r434" class="ques_images">
+				<img src="img/40.png" id="r4340" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/5.png" onclick="fill_color('R',this.id)" id="r445" class="ques_images">
+				<img src="img/50.png" id="r4450" class="ques_image hidden">
+				</center>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/1.png" onclick="fill_color('T',this.id)" id="r511" class="ques_images">
+				<img src="img/10.png" id="r5110" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/2.png" onclick="fill_color('S',this.id)" id="r522" class="ques_images">
+				<img src="img/20.png" id="r5220" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/7.png" onclick="fill_color('SR',this.id)" id="r537" class="ques_images">
+				<img src="img/70.png" id="r5370" class="ques_image hidden">
+				</center>
+			</div>
+			<div class="col-md-2" style="margin:auto;">
+				<center>
+				<img src="img/6.png" onclick="fill_color('SC',this.id)" id="r546" class="ques_images">
+				<img src="img/60.png" id="r5460" class="ques_image hidden">
+				</center>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4"><center><img id="submit" onclick="check()" src="img/submit.png" style="margin-top:10px; width:50%;"></center></div>
+			<div class="col-md-4"><center><img id="sol" onclick="solve()" src="img/answer.png" style="margin-top:10px; width:50%;"></center></div>
+			<div class="col-md-4"><center><img id="reset" onclick="window.location.reload()" src="img/reset.png" style="margin-top:10px; width:50%;"></center></div>
+		</div>
+		</div>
+	</div>
+</div>
+<div id="blocks" style="display:none; margin-top:-400px; z-index:99;">
+	<center><img src="img/Welldone.gif" id="welldone"></center>
+</div>
+<div id="blocks2" style="display:none; margin-top:-400px; z-index:99;">
+	<center><img src="img/TryAgain.gif" style="width:300px;"></center>
+</div>
+<audio src="audio/well-done.mp3" id="audio1"></audio>
+<audio src="audio/try-again.mp3" id="audio2"></audio>
+<audio src="audio/Page-89.mp3" id="audio3"></audio>
+</body>
+<script src="main.js"></script>
+</html>
