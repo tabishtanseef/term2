@@ -154,7 +154,7 @@
 		link: 'resources/interactivities/Tabish/Page 120/index.html', type: 'iframe', 'size': '1024x768'
 	},{
 		x: 35, y: 4, title: 'Interactivity', icon: 'img/icons/interactivites.png',
-		link: 'resources/interactivities/Tabish/Page 125/index.html', type: 'iframe', 'size': '1024x768'
+		link: 'resources/interactivities/Tabish/Page 125.2/index.html', type: 'iframe', 'size': '1024x768'
 	},{
 		x: 45, y: 4, title: 'Interactivity', icon: 'img/icons/interactivites.png',
 		link: 'resources/interactivities/Tabish/Page 128/index.html', type: 'iframe', 'size': '1024x768'
