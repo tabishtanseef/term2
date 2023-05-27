@@ -163,7 +163,10 @@
 		link: 'resources/interactivities/Tabish/Page 132/index.html', type: 'iframe', 'size': '1024x768'
 	},{
 		x: 65, y: 4, title: 'Interactivity', icon: 'img/icons/interactivites.png',
-		link: 'resources/interactivities/Tabish/Page 138/index.html', type: 'iframe', 'size': '1024x768'
+		link: 'resources/interactivities/Tabish/Page 138.1/index.html', type: 'iframe', 'size': '1024x768'
+	},{
+		x: 65, y: 34, title: 'Interactivity', icon: 'img/icons/interactivites.png',
+		link: 'resources/interactivities/Tabish/Page 138.2/index.html', type: 'iframe', 'size': '1024x768'
 	},{
 		x: 75, y: 4, title: 'Interactivity', icon: 'img/icons/interactivites.png',
 		link: 'resources/interactivities/Tabish/Page 142/index.html', type: 'iframe', 'size': '1024x768'
@@ -182,6 +185,9 @@
 	},{
 		x: 35, y: 24, title: 'Interactivity', icon: 'img/icons/interactivites.png',
 		link: 'resources/interactivities/Tabish/Page 152/index.html', type: 'iframe', 'size': '1024x768'
+	},{
+		x: 45, y: 24, title: 'Interactivity', icon: 'img/icons/interactivites.png',
+		link: 'resources/interactivities/Tabish/Page 153/index.html', type: 'iframe', 'size': '1024x768'
 	}],
 
 	'17': [{
