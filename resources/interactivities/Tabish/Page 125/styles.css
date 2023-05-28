@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Sehaj";
+  src: url('All Fonts/Sehaj-ENG-Bold.otf');
+}
+h4{
+	color:#C529A3 !important;
+	font-family: "Sehaj";
+	letter-spacing:1px;
+}
+.let{
+	color:#0166B3;
+}
+
+body{
+	margin:0px;
+	padding:10px;
+	background-size:cover;
+}
+#welldone{
+	width:50%;
+}
+input{
+	width:50px;
+	height:45px;
+	padding:10px;
+	border:0;
+	text-align:center;
+	cursor:pointer;
+	background:none;
+	font-size:25px !important; 
+}
+h2 {
+	background-color:orange;
+	color:white;
+	text-shadow:2px 2px #000;
+	text-align:center;
+	font-size:40px;
+	padding:10px;
+	font-family:'Hammersmith One', sans-serif;
+}
+.hidden{
+	display:none;
+}
+.speaker{
+	width:30px; 
+	height:30px; 
+	margin-right:10px;
+	margin-left:10px;
+	cursor:pointer;
+}
+#submit, #reset, #sol{
+	cursor:pointer;
+}
+.mains{
+	border-radius:20px;
+	border: 5px dashed #D0E39A;
+	background:#FFFDE9;
+	padding:10px;
+}
+
+.box{
+	width:50px;
+	height:45px;
+	margin-top:3px;
+	background:#FEF7F0;
+	border:1px solid orange;
+}
+.tex{
+	float:left !important;
+	text-align:left !important;
+	font-size:12px;
+}
+.up{
+	margin-top:-40px !important;
+}
+.col-md-1{
+	text-align:center;
+	padding:0px;
+}

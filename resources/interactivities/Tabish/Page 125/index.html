@@ -1,0 +1,178 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>How many?</title>
+	<link href="styles.css" type="text/css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	<script  src="https://code.jquery.com/jquery-3.6.3.js" ></script>
+</head>
+<body>
+<div class="field">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<h4>
+					<img onclick="play()" src="img/speaker.png" class="speaker" >Complete the crossword puzzle with the help of the 
+picture clues.
+				</h4>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row canvas">
+			<div class="col-md-2" style="text-align:center;"><br><br>
+				<img src="img/1.jpg" style="width:100%;"><br>
+				<img src="img/2.jpg" style="width:100%;"><br>
+				<img src="img/3.jpg" style="width:100%;"><img src="img/4.jpg" style="width:50%;">
+			</div>
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-2" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ><div class="box"><span class="tex">1</span><input type="text" class="up" value="r" readonly></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-2" ></div>
+					
+					<div class="col-md-2" ></div>
+					<div class="col-md-1" ><div class="box"><span class="tex">2</span><input type="text" class="up" value="b" readonly></div></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="e" readonly></div></div>
+					<div class="col-md-1" ><div class="box"><input type="text" id="1" autocomplete="off"></div></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="r" readonly></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-2" ></div>
+					
+					<div class="col-md-2" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="b" readonly></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-2" ></div>
+					
+					<div class="col-md-2" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="b" readonly></div></div>
+					<div class="col-md-1" ><div class="box"><span class="tex">4</span><input type="text" class="up" value="m" readonly></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-2" ></div>
+					
+					<div class="col-md-2" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ><div class="box"><span class="tex">3</span><input type="text" class="up" value="l" readonly></div></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="i" readonly></div></div>
+					<div class="col-md-1" ><div class="box"><input type="text" id="2" autocomplete="off"></div></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="n" readonly></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-2" ></div>
+					
+					<div class="col-md-2" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ><div class="box"><input type="text" id="3" autocomplete="off"></div></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="n" readonly></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-2" ></div>
+					
+					<div class="col-md-2" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ><div class="box"><span class="tex">6</span><input type="text" class="up" value="s" readonly></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="k" readonly></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ><div class="box"><span class="tex">7</span><input type="text" class="up" value="c" readonly></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-2" ></div>
+					
+					<div class="col-md-2" ></div>
+					<div class="col-md-1" ><div class="box"><span class="tex">5</span><input type="text" class="up" value="c" readonly></div></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="h" readonly></div></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="e" readonly></div></div>
+					<div class="col-md-1" ><div class="box"><input type="text" id="4" autocomplete="off"></div></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="t" readonly></div></div>
+					<div class="col-md-1" ><div class="box"><input type="text" id="5" autocomplete="off"></div></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="h" readonly></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-2" ></div>
+					
+					<div class="col-md-2" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="e" readonly></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="y" readonly></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="t" readonly></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-2" ></div>
+					
+					<div class="col-md-2" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ><div class="box"><input type="text" id="6" autocomplete="off"></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-2" ></div>
+					
+					<div class="col-md-2" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ><div class="box"><input type="text" value="p" readonly></div></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-1" ></div>
+					<div class="col-md-2" ></div>
+				</div>
+			</div>
+			<div class="col-md-2" style="text-align:center;"><br><br>
+				<img src="img/5.jpg" style="width:100%;"><br>
+				<img src="img/6.jpg" style="width:100%;"><br>
+				<img src="img/7.jpg" style="width:100%;">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4"><center><img id="submit" onclick="check()" src="img/submit.png" style="margin-top:0px; width:40%;"></center></div>
+			<div class="col-md-4"><center><img id="sol" onclick="solve()" src="img/answer.png" style="margin-top:0px; width:40%;"></center></div>
+			<div class="col-md-4"><center><img id="reset" onclick="window.location.reload()" src="img/reset.png" style="margin-top:0px; width:40%;"></center></div>
+		</div>
+	</div>
+</div>
+<div id="blocks" style="display:none; margin-top:-500px; z-index:99;">
+	<center><img src="img/Welldone.gif" id="welldone"></center>
+</div>
+<div id="blocks2" style="display:none; margin-top:-400px; z-index:99;">
+	<center><img src="img/TryAgain.gif" style="width:300px;"></center>
+</div>
+<audio src="audio/well-done.mp3" id="audio1"></audio>
+<audio src="audio/try-again.mp3" id="audio2"></audio>
+<audio src="audio/Page-125.mp3" id="audio3"></audio>
+</body>
+<script src="main.js"></script>
+</html>
