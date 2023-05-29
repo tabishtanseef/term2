@@ -1,29 +1,87 @@
+
 @font-face {
   font-family: "Sehaj";
+  src: url('All Fonts/Sehaj-ENG-SemiBold.otf');
+}
+@font-face {
+  font-family: "Sehaj Bold";
   src: url('All Fonts/Sehaj-ENG-Bold.otf');
 }
-h5{
+body{
+	margin:0px;
+	padding:10px;
+	background-image:url('img/b1.png');
+	background-size:cover;
+	font-family: "Sehaj" !important;
+	cursor: url(img/brush.png), auto;")
+}
+h4{
 	color:#C529A3 !important;
-	font-family: "Sehaj";
+	font-family: "Sehaj Bold";
 	letter-spacing:1px;
+}
+h5{
+	background:#FFFDE9;
+	border:5px solid #FECA0A;
+	padding:10px;
+	border-radius:20px;
+}
+.r1{
+	border-radius:20px;
+	margin-top:10px ;
+	background:#EFF6E8;
+}
+.r2{
+	border-radius:20px;
+	margin-top:10px !important;
+	background:#FEF9E7;
+}
+.r3{
+	border-radius:20px;
+	margin-top:10px !important;
+	background:#E1F4FC;
+}
+.r4{
+	border-radius:20px;
+	margin-top:10px !important;
+	background:#FEF0E2;
+}
+.r5{
+	border-radius:20px;
+	margin-top:10px !important;
+	background:#EFF6E8;
+}
+.box{
+	width:40px;
+	height:40px;
 }
 .let{
 	color:#0166B3;
 }
-body{
-	margin:0px;
-	padding:20px;
-	background-image:url('img/b1.png');
-	background-size:cover;
+#welldone{
+	width:50%;
+}
+canvas{
+	box-shadow: 1px 2px 1px 2px magenta;
+	margin:20px;
+}
+span{
+	padding:5px;
+}
+input{
+	width:150px;
+	font-size:16px !important;
+	text-align:center;
+	background:#fff;
+	border:3px solid #FECA0A;
+	border-radius:20px;
+	margin-top:10px;
+	padding:5px;
+	cursor:pointer;
+	letter-spacing:3px;
 }
 .hidden{
 	display:none;
-}
-#submit, #reset, #sol{
-	cursor:pointer;
-}
-.canvas{
-	cursor: url(img/brush.png), auto;
 }
 .speaker{
 	width:30px; 
@@ -32,17 +90,25 @@ body{
 	margin-left:10px;
 	cursor:pointer;
 }
-.mains{
-	border-radius:50px;
-	border: 5px dashed #F171AB;
-	background:#fff;
-	padding:20px;
+.ques_image, .ques_images{
+	width:120%; 
+}
+.answers{
+	font-size:30px;
+	cursor:pointer;
+}
+.col-md-3{
+	text-align:center;
+}
+#submit, #reset, #sol{
+	cursor:pointer;
 }
 .tools{
-	
+	display:flex;
+	justify-content: center;
+	flex-direction: row;
 	margin-top: 15px;
 }
-
 .tools .color-field{
 	height:40px;
 	width:40px;
