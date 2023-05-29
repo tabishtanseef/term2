@@ -14,7 +14,7 @@ h4{
 body{
 	margin:0px;
 	padding:20px;
-	background-image:url('img/b1.jpg');
+	background-image:url('img/b1.png');
 	background-size:cover;
 }
 .hidden{
@@ -27,6 +27,7 @@ body{
 	cursor: url(img/pen.png), auto;
 	border:2px solid #E39F13;
 	border-radius:50%;
+	background:#fff;
 }
 .speaker{
 	width:30px; 

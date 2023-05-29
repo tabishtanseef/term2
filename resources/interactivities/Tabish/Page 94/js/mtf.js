@@ -55,7 +55,7 @@ $(document).ready(function() {
 			$("#feedback-box").html('<img src="img/correct_Img.gif" />').show();
 			playAudio('well-done.mp3');
 			setInterval(function(){
-			$('.wrapper').addClass('hidden');
+			//$('.wrapper').addClass('hidden');
 			$('.tab').removeClass('hidden');},2000);
             $("#btn-tryagain").attr('disabled', 'disabled');
             /*$('#msgComp').delay(1000).animate({
@@ -483,6 +483,6 @@ function playAudio(audioname) {
 	audio.play();
 }
 function pla() {
-	var audio = new Audio("audio/Page-128.mp3");
+	var audio = new Audio("audio/Page-94.mp3");
 	audio.play();
 }

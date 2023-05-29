@@ -117,3 +117,7 @@ function play(){
 	audio.play();
 }
 
+function pla(){
+	var audio = document.getElementById('audio4');
+	audio.play();
+}

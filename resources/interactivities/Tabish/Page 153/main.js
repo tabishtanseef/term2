@@ -95,6 +95,11 @@ function solve(){
 function go(a){
 	a.src='img/1.png';
 	$('.submit').css('pointer-events','none');
+	var audio = document.getElementById('audio1');
+		audio.play();
+		setTimeout(function(){ 
+		 $('#blocks').show(); 
+		},500);
 }
 function bo(a){
 
@@ -104,4 +109,5 @@ function bo(a){
 	$('#'+b).css('color','black');
 	$('#'+a).css('color','green');
 	$('#'+a).css('border','5px solid green');
+	
 }

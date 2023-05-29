@@ -7,25 +7,25 @@ function check() {
 	v5 = $('#5').val();
 	v6 = $('#6').val();
 	
-	if(v1!='c'){
+	if(v1!='a'){
 		$('#1').css('border','2px solid red');
 	}
-	if(v2!='a'){
+	if(v2!='o'){
 		$('#2').css('border','2px solid red');
 	}
-	if(v3!='i'){
+	if(v3!='t'){
 		$('#3').css('border','2px solid red');
 	}
-	if(v4!='r'){
+	if(v4!='e'){
 		$('#4').css('border','2px solid red');
 	}
-	if(v5!='r'){
+	if(v5!='a'){
 		$('#5').css('border','2px solid red');
 	}
-	if(v6!='n'){
+	if(v6!='e'){
 		$('#6').css('border','2px solid red');
 	}
-	if(v1=='c' && v2=='a' && v3=='i' && v4=='r' && v5=='r' && v6=='n'){
+	if(v1=='a' && v2=='o' && v3=='t' && v4=='e' && v5=='a' && v6=='e'){
 		var audio = document.getElementById("audio1");
 		audio.play();
 		setInterval(function(){ 
@@ -43,12 +43,12 @@ function check() {
 function solve(){
 	$('#submit').css('pointer-events','none');
 	$('#submit').css('opacity','0.5');
-	$('#1').val('c');
-	$('#2').val('a');
-	$('#3').val('i');
-	$('#4').val('r');
-	$('#5').val('r');
-	$('#6').val('n');
+	$('#1').val('a');
+	$('#2').val('o');
+	$('#3').val('t');
+	$('#4').val('e');
+	$('#5').val('a');
+	$('#6').val('e');
 }
 
  
