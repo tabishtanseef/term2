@@ -30,11 +30,7 @@
   font-family: "Sehaj";
   src: url('All Fonts/Sehaj-ENG-Bold.otf');
 }
-
-
 img{
-	-webkit-filter: drop-shadow(5px 5px 5px #222);
-	filter: drop-shadow(3px 3px 5px #222);
 	border-radius:20px;
 }
 .question-section{
@@ -60,6 +56,9 @@ img{
 .speaker{
 	width:35px;
 	cursor:pointer;
+}
+.btn{
+	margin-top:-20px;
 }
 </style>
 </head>
@@ -89,14 +88,11 @@ img{
 						</div>
 						<div class="clearfix"></div>
 					</div>
-					<footer class="footer" >
-						<div class="button-wrapper" style="">
-							<button disabled id="btn-tryagain" onClick="tryAgainAct()" class="btn btn-primary">Try Again</button>
-							<button id="btn-reset" onClick="resetActivity()" class="btn btn-primary">Reset</button>
-							<button disabled id="showAns" class="btn btn-primary">Solution</button>
-							<button disabled id="submitAns" class="btn btn-primary">Submit</button>
-						</div>
-					</footer>
+					<div class="button-wrapper" style="text-align:center;">
+						<img src="img/submit.png" style="width:150px;" id="submitAns">
+						<img style="opacity:0.5 !important;" src="img/answer.png" style="width:150px;" disabled id="showAns" >
+						<img src="img/reset.png" style="width:150px;" id="btn-reset" onClick="resetActivity()">
+					</div>
 					<div class="clearfix"></div>
 				</div>
 			</div>

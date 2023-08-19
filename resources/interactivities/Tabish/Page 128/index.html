@@ -30,11 +30,7 @@
   font-family: "Sehaj";
   src: url('All Fonts/Sehaj-ENG-Bold.otf');
 }
-
-
 img{
-	-webkit-filter: drop-shadow(5px 5px 5px #222);
-	filter: drop-shadow(3px 3px 5px #222);
 	border-radius:20px;
 }
 .question-section{
@@ -61,6 +57,9 @@ img{
 	width:35px;
 	cursor:pointer;
 }
+.btn{
+	margin-top:-20px;
+}
 </style>
 </head>
 
@@ -68,17 +67,15 @@ img{
 
 <div class="wrapper">
 	<div class="container">
-		
 		<section class="content">
-			
 			<div class="sub-header">
 				<h4 class="title-h4" id=""><img onclick="pla()" src="img/speaker.png" class="speaker"> Click on the dots to match the animals with their homes.</h4>
 			</div>
 			<div class="body-container">
-				<div class="question-n" style="margin-top:-30px !important;">
+				<div class="question-n" style="margin-top:-20px !important;">
 					
 					<div class="question-section">
-						<div id="mainWrapper" style="margin-top:-50px !important;">
+						<div id="mainWrapper" style="margin-top:-40px !important;">
 							<div class="">
 								<div class="leftSide div1" id="dvLeft"></div>
 								<div class="rightSide div1" id="dvRight"></div>
@@ -89,14 +86,11 @@ img{
 						</div>
 						<div class="clearfix"></div>
 					</div>
-					<footer class="footer" >
-						<div class="button-wrapper" style="">
-							<button disabled id="btn-tryagain" onClick="tryAgainAct()" class="btn btn-primary">Try Again</button>
-							<button id="btn-reset" onClick="resetActivity()" class="btn btn-primary">Reset</button>
-							<button disabled id="showAns" class="btn btn-primary">Solution</button>
-							<button disabled id="submitAns" class="btn btn-primary">Submit</button>
-						</div>
-					</footer>
+					<div class="button-wrapper" style="text-align:center;">
+						<img src="img/submit.png" style="width:150px;" id="submitAns">
+						<img style="opacity:0.5 !important;" src="img/answer.png" style="width:150px;" disabled id="showAns" >
+						<img src="img/reset.png" style="width:150px;" id="btn-reset" onClick="resetActivity()">
+					</div>
 					<div class="clearfix"></div>
 				</div>
 			</div>

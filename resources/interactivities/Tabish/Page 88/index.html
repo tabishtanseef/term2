@@ -27,24 +27,30 @@
 					<div onClick="change_color(this)" class="color-field" style="background:#ffff00;"></div>
 					<input onInput="draw_color = this.value" id="c_p" type="color" class="color-picker">
 					<input onInput="draw_width = this.value" type="range" min="1" max="50" value="1" class="pen-range">
-					<button onclick="pen()" type="button" class="button">Pen</button>
-					<button onclick="erase()" type="button" class="button">Eraser</button>
-					<button onclick="clear_canvas()" type="button" class="button">Clear</button>
+					<!-- <button onclick="pen()" type="button" class="button">Pen</button>
+					<button onclick="erase()" type="button" class="button">Eraser</button> 
+					<button onclick="clear_canvas2()" type="button" class="button">Clear</button>-->
 				</div>
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-md-12">
-				<img src="img/1.png" style="width:100%;">
+				<center><img src="img/1.jpg" id="scream2" class="hidden" >
+				<canvas id="canvas2" class="canvas"></canvas> <br>
+				<div class="tools"><button onclick="clear_canvas2()" type="button" class="button">Clear</button></div></center>
 			</div>
 			<h4>
 			<br>
 				<img onclick="pla()" src="img/speaker.png" class="speaker" >
 				Draw one by yourself.
 			</h4>
+			<div class="col-md-12">
+				<center><img src="img/2.jpg" id="scream" class="hidden" >
+				<canvas id="canvas" class="canvas"></canvas><br>
+				<div class="tools"><button onclick="clear_canvas()" type="button" class="button">Clear</button></div></center>
+			</div>
 		</div>
-		<canvas id="canvas" class="canvas"></canvas>
 	</div>
 <audio src="audio/Page-88.1.mp3" id="audio3"></audio>
 <audio src="audio/Page-88.2.mp3" id="audio4"></audio>

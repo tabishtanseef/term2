@@ -49,7 +49,7 @@ var tempJsonObj =
         "l1_r3",
         "l2_r4",
         "l3_r2",
-        "l4_r1"       
+        "l4_r1"      
     ],
     "text": "Click on an option in Column A and then click on the correct answer in Column B.<br /> <br /> After completing, click on Submit.<br /> <br />To check answer, click on Show Answer."
 }

@@ -27,7 +27,7 @@ $(document).ready(function() {
     populateUI();
 
     $("#submitAns").click(function() {
-		flag = 0;
+		flag = 1;
         $("#btn-tryagain").removeAttr('disabled');
         
 		//showLineBlocker();
@@ -42,30 +42,27 @@ $(document).ready(function() {
                     val.className = 'blackPoint';
             });
         });
+		len=0;
         //this loop set the red color for all wrong answers
         $.each(tempJsonObj.Answer, function(j, value) {
             $.each($('#main_span span'), function(i, val) {
                 if (val.className != value && val.className != 'blackPoint') {
                     val.className = 'redPoint';
+					$('#showAns').css('opacity','1');
                     flag = 1;
-                }
+                }else{
+					flag = 0;
+				}
             });
+			len++;
         });
-        if (flag == 0) {
+        if (flag == 0 && lineDraw.length==len) {
 			$("#feedback-box").html('<img src="img/correct_Img.gif" />').show();
 			playAudio('well-done.mp3');
 			setInterval(function(){
-			//$('.wrapper').addClass('hidden');
+			$('.wrapper').addClass('hidden');
 			$('.tab').removeClass('hidden');},2000);
             $("#btn-tryagain").attr('disabled', 'disabled');
-            /*$('#msgComp').delay(1000).animate({
-			left:'36%',
-			top:'36%',
-			width:'345px',
-			height:'200px'
-		});*/
-            //		alert();
-            //			$('#showAns').parent().hide();
         } else {
 			$("#feedback-box").html('<img src="img/incorrect_Img.gif" />').show();
             playAudio('try-again.mp3');
@@ -102,7 +99,7 @@ $(document).ready(function() {
         if (status == 5) {
             $("#showAns").attr('disabled', 'disabled')
         } else {
-        //tryAgain.play();
+			//tryAgain.play();
         }
 
         $(this).attr("disabled", "disabled");
@@ -127,6 +124,7 @@ $(document).ready(function() {
 		$("#btn-tryagain").attr('disabled', 'disabled');
 
         //this loop removes all wrong and right tick marks before each option
+		
         for (i = 0; i < lineDraw.length; i++) {
             lineDraw[i].lval[0].parentElement.children[0].className = '';
         }
@@ -483,6 +481,6 @@ function playAudio(audioname) {
 	audio.play();
 }
 function pla() {
-	var audio = new Audio("audio/Page-94.mp3");
+	var audio = new Audio("audio/Page-128.mp3");
 	audio.play();
 }

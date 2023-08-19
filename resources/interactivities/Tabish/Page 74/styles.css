@@ -10,6 +10,9 @@ h5{
 .let{
 	color:#0166B3;
 }
+.green{
+	color:#71BF44;
+}
 body{
 	margin:0px;
 	padding:20px;
@@ -28,8 +31,7 @@ body{
 .speaker{
 	width:30px; 
 	height:30px; 
-	margin-right:10px;
-	margin-left:10px;
+	float:right;
 	cursor:pointer;
 }
 .mains{

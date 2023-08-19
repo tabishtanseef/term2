@@ -1,29 +1,60 @@
 const canvas = document.getElementById("canvas");
-canvas.width = window.innerWidth - 250;
-canvas.height = window.innerHeight - 500;
-
 let context = canvas.getContext("2d");
-let start_background_color = "white";
-context.fillStyle = start_background_color;
-context.fillRect(0,0,canvas.width,canvas.height);
-
-
-let draw_color = "cyan";
-let draw_width = "2";
-
-let is_drawing = false;
-
-let restore_array = [];
-let index = -1;
-
 canvas.addEventListener("touchstart", start, false);
 canvas.addEventListener("touchmove", draw, false);
 canvas.addEventListener("mousedown", start, false);
 canvas.addEventListener("mousemove", draw, false);
-
 canvas.addEventListener("touchend", stop, false);
 canvas.addEventListener("mouseup", stop, false);
 canvas.addEventListener("mouseout", stop, false);
+
+const canvas2 = document.getElementById("canvas2");
+let context2 = canvas2.getContext("2d");
+canvas2.addEventListener("touchstart", start2, false);
+canvas2.addEventListener("touchmove", draw2, false);
+canvas2.addEventListener("mousedown", start2, false);
+canvas2.addEventListener("mousemove", draw2, false);
+canvas2.addEventListener("touchend", stop2, false);
+canvas2.addEventListener("mouseup", stop2, false);
+canvas2.addEventListener("mouseout", stop2, false);
+
+
+let draw_color = "black";
+let draw_width = "2";
+
+
+let is_drawing = false;
+let restore_array = [];
+let index = -1;
+
+let is_drawing2 = false;
+let restore_array2 = [];
+let index2 = -1;
+
+
+window.onload = function() {
+	a = localStorage.getItem("lastname");
+	if(a=='' || a==null || a==undefined){
+		localStorage.setItem("lastname", "Smith");
+		location.reload();
+	}else{
+		localStorage.setItem("lastname", "");
+	}
+	var canvas = document.getElementById("canvas");
+	canvas.width = 700;
+	canvas.height = 200;
+	var ctx = canvas.getContext("2d");
+	var img = document.getElementById("scream");
+	ctx.drawImage(img, 0, 0);
+	
+	var canvas2 = document.getElementById("canvas2");
+	canvas2.width = 700;
+	canvas2.height = 200;
+	var ctx2 = canvas2.getContext("2d");
+	var img2 = document.getElementById("scream2");
+	ctx2.drawImage(img2, 0, 0);
+	
+};
 
 function change_color(element){
 	draw_color = element.style.background;
@@ -41,6 +72,7 @@ function change_color(element){
 		g = "0" + g;
 	if (b.length == 1)
 		b = "0" + b;
+	
 	draw_color = "#" + r + g + b;
 	$("#c_p").val(draw_color);
 	var elementToChange = document.getElementsByClassName("canvas")[0];
@@ -52,6 +84,14 @@ function start(){
 	context.beginPath();
 	context.moveTo(event.clientX - canvas.offsetLeft,
 					event.clientY - canvas.offsetTop);
+	event.preventDefault();
+}
+
+function start2(){
+	is_drawing2 = true;
+	context2.beginPath();
+	context2.moveTo(event.clientX - canvas2.offsetLeft,
+					event.clientY - canvas2.offsetTop);
 	event.preventDefault();
 }
 
@@ -68,6 +108,19 @@ function draw(event) {
 	event.preventDefault();
 }
 
+function draw2(event) {	
+	if(is_drawing2){
+		context2.lineTo(event.clientX - canvas2.offsetLeft,
+					   event.clientY - canvas2.offsetTop);
+		context2.strokeStyle = draw_color;
+		context2.lineWidth = draw_width;
+		context2.lineCap = "round";
+		context2.lineJoin = "round";
+		context2.stroke();
+	}
+	event.preventDefault();
+}
+
 function stop(event) {
 	if(is_drawing){
 		context.stroke();
@@ -80,15 +133,37 @@ function stop(event) {
 		index += 1;
 	}
 }
+function stop2(event) {
+	if(is_drawing2){
+		context2.stroke();
+		context2.closePath();
+		is_drawing2 = false;
+	}
+	event.preventDefault();
+	if(event.type != 'mouseout'){
+		restore_array2.push(context2.getImageData(0, 0, canvas2.width, canvas2.height));
+		index2 += 1;
+	}
+}
 
 function clear_canvas() {
-	context.fillStyle = start_background_color;
-	context.clearRect(0, 0, canvas.width, canvas.height);
-	context.fillRect(0, 0, canvas.width, canvas.height);
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	var img = document.getElementById("scream");
+	ctx.drawImage(img, 0, 0);
 	restore_array=[];
 	index=-1;
 }
 
+
+function clear_canvas2() {
+	var canvas2 = document.getElementById("canvas2");
+	var ctx2 = canvas2.getContext("2d");
+	var img2 = document.getElementById("scream2");
+	ctx2.drawImage(img2, 0, 0);
+	restore_array2=[];
+	index2=-1;
+}
 
 function undo_last() {
 	if(index<=0){
@@ -99,12 +174,25 @@ function undo_last() {
 		context.putImageData(restore_array[index],0,0);
 	}
 }
+
+function undo_last2() {
+	if(index2<=0){
+		clear_canvas2();
+	}else{
+		index2 -= 1;
+		restore_array2.pop();
+		context2.putImageData(restore_array2[index2],0,0);
+	}
+}
+
+
 function erase() {
 	draw_color = 'white';
 	draw_width = "20";
 	var elementToChange = document.getElementsByClassName("canvas")[0];
 	elementToChange.style.cursor = "url('img/eraser.png'), auto";
 }
+
 function pen() {
 	draw_color = 'black';
 	draw_width = "2";

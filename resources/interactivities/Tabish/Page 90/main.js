@@ -4,7 +4,7 @@ function check(){
 	val3 = $('#3').val();
 	val4 = $('#4').val();
 	
-	if(val1!='12'){
+	if(val1!='15'){
 		$("#1").css('border',"3px solid red");
 	}
 	if(val2!='9'){
@@ -18,7 +18,7 @@ function check(){
 	}
 	
 	
-	if(val1=='12' && val2=='9' && val3=='3' && val4=='6'){
+	if(val1=='15' && val2=='9' && val3=='3' && val4=='6'){
 		i=1;
 		while(i<5){
 			$("#"+i).css('border',"3px solid green");
@@ -44,7 +44,7 @@ function play(){
 	audio.play();
 }
 function solve(){
-	$('#1').val('12');
+	$('#1').val('15');
 	$('#2').val('9');
 	$('#3').val('3');
 	$('#4').val('6');

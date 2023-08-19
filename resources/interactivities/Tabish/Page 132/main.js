@@ -40,7 +40,7 @@ function check(){
 	if(val9.toLowerCase()!='i'){
 		$("#9").css('border-bottom',"3px solid red");
 	}
-	if(val10.toLowerCase()!='i'){
+	if(val10.toLowerCase()!='e'){
 		$("#10").css('border-bottom',"3px solid red");
 	}
 	if(val11.toLowerCase()!='a'){
@@ -53,7 +53,7 @@ function check(){
 		$("#13").css('border-bottom',"3px solid red");
 	}
 	
-	if(val1.toLowerCase()=='o' && val2.toLowerCase()=='e' && val3.toLowerCase()=='u' && val4.toLowerCase()=='e' && val5.toLowerCase()=='k' && val6.toLowerCase()=='h' && val7.toLowerCase()=='e' && val8.toLowerCase()=='c' && val9.toLowerCase()=='i' && val10.toLowerCase()=='i' && val11.toLowerCase()=='a' && val12.toLowerCase()=='b' && val13.toLowerCase()=='d'){
+	if(val1.toLowerCase()=='o' && val2.toLowerCase()=='e' && val3.toLowerCase()=='u' && val4.toLowerCase()=='e' && val5.toLowerCase()=='k' && val6.toLowerCase()=='h' && val7.toLowerCase()=='e' && val8.toLowerCase()=='c' && val9.toLowerCase()=='i' && val10.toLowerCase()=='e' && val11.toLowerCase()=='a' && val12.toLowerCase()=='b' && val13.toLowerCase()=='d'){
 		i=1;
 		while(i<12){
 			$("#"+i).css('border-bottom',"3px solid green");
@@ -88,7 +88,7 @@ function solve(){
 	$('#7').val('e');
 	$('#8').val('c');
 	$('#9').val('i');
-	$('#10').val('i');
+	$('#10').val('e');
 	$('#11').val('a');
 	$('#12').val('b');
 	$('#13').val('d');

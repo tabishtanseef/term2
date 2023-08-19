@@ -153,57 +153,6 @@ function draw2(event) {
 	event.preventDefault();
 }
 
-function draw3(event) {	
-	if(is_drawing3){
-		context3.lineTo(event.clientX - canvas3.offsetLeft,
-					   event.clientY - canvas3.offsetTop);
-		context3.strokeStyle = draw_color;
-		context3.lineWidth = draw_width;
-		context3.lineCap = "round";
-		context3.lineJoin = "round";
-		context3.stroke();
-	}
-	event.preventDefault();
-}
-
-function draw4(event) {	
-	if(is_drawing4){
-		context4.lineTo(event.clientX - canvas4.offsetLeft,
-					   event.clientY - canvas4.offsetTop);
-		context4.strokeStyle = draw_color;
-		context4.lineWidth = draw_width;
-		context4.lineCap = "round";
-		context4.lineJoin = "round";
-		context4.stroke();
-	}
-	event.preventDefault();
-}
-
-function draw5(event) {	
-	if(is_drawing5){
-		context5.lineTo(event.clientX - canvas5.offsetLeft,
-					   event.clientY - canvas5.offsetTop);
-		context5.strokeStyle = draw_color;
-		context5.lineWidth = draw_width;
-		context5.lineCap = "round";
-		context5.lineJoin = "round";
-		context5.stroke();
-	}
-	event.preventDefault();
-}
-
-function draw6(event) {	
-	if(is_drawing6){
-		context6.lineTo(event.clientX - canvas6.offsetLeft,
-					   event.clientY - canvas6.offsetTop);
-		context6.strokeStyle = draw_color;
-		context6.lineWidth = draw_width;
-		context6.lineCap = "round";
-		context6.lineJoin = "round";
-		context6.stroke();
-	}
-	event.preventDefault();
-}
 function stop(event) {
 	if(is_drawing){
 		context.stroke();
@@ -228,54 +177,6 @@ function stop2(event) {
 		index2 += 1;
 	}
 }
-function stop3(event) {
-	if(is_drawing3){
-		context3.stroke();
-		context3.closePath();
-		is_drawing3 = false;
-	}
-	event.preventDefault();
-	if(event.type != 'mouseout'){
-		restore_array3.push(context3.getImageData(0, 0, canvas3.width, canvas3.height));
-		index3 += 1;
-	}
-}
-function stop4(event) {
-	if(is_drawing4){
-		context4.stroke();
-		context4.closePath();
-		is_drawing4 = false;
-	}
-	event.preventDefault();
-	if(event.type != 'mouseout'){
-		restore_array4.push(context4.getImageData(0, 0, canvas4.width, canvas4.height));
-		index4 += 1;
-	}
-}
-function stop5(event) {
-	if(is_drawing5){
-		context5.stroke();
-		context5.closePath();
-		is_drawing5 = false;
-	}
-	event.preventDefault();
-	if(event.type != 'mouseout'){
-		restore_array5.push(context5.getImageData(0, 0, canvas5.width, canvas5.height));
-		index5 += 1;
-	}
-}
-function stop6(event) {
-	if(is_drawing6){
-		context6.stroke();
-		context6.closePath();
-		is_drawing6 = false;
-	}
-	event.preventDefault();
-	if(event.type != 'mouseout'){
-		restore_array6.push(context6.getImageData(0, 0, canvas6.width, canvas6.height));
-		index6 += 1;
-	}
-}
 
 function clear_canvas() {
 	var canvas = document.getElementById("canvas");
@@ -297,43 +198,6 @@ function clear_canvas2() {
 }
 
 
-function clear_canvas3() {
-	var canvas3 = document.getElementById("canvas3");
-	var ctx3 = canvas3.getContext("2d");
-	var img3 = document.getElementById("scream3");
-	ctx3.drawImage(img3, 0, 0);
-	restore_array3=[];
-	index3=-1;
-}
-
-
-function clear_canvas4() {
-	var canvas4 = document.getElementById("canvas4");
-	var ctx4 = canvas4.getContext("2d");
-	var img4 = document.getElementById("scream4");
-	ctx4.drawImage(img4, 0, 0);
-	restore_array4=[];
-	index4=-1;
-}
-
-function clear_canvas5() {
-	var canvas5 = document.getElementById("canvas5");
-	var ctx5 = canvas5.getContext("2d");
-	var img5 = document.getElementById("scream5");
-	ctx5.drawImage(img5, 0, 0);
-	restore_array5=[];
-	index5=-1;
-}
-
-function clear_canvas6() {
-	var canvas6 = document.getElementById("canvas6");
-	var ctx6 = canvas6.getContext("2d");
-	var img6 = document.getElementById("scream6");
-	ctx6.drawImage(img6, 0, 0);
-	restore_array6=[];
-	index6=-1;
-}
-
 function undo_last() {
 	if(index<=0){
 		clear_canvas();
@@ -354,45 +218,6 @@ function undo_last2() {
 	}
 }
 
-function undo_last3() {
-	if(index3<=0){
-		clear_canvas3();
-	}else{
-		index3 -= 1;
-		restore_array3.pop();
-		context3.putImageData(restore_array3[index3],0,0);
-	}
-}
-
-function undo_last4() {
-	if(index4<=0){
-		clear_canvas4();
-	}else{
-		index4 -= 1;
-		restore_array4.pop();
-		context4.putImageData(restore_array4[index4],0,0);
-	}
-}
-
-function undo_last5() {
-	if(index5<=0){
-		clear_canvas5();
-	}else{
-		index5 -= 1;
-		restore_array5.pop();
-		context5.putImageData(restore_array5[index5],0,0);
-	}
-}
-
-function undo_last6() {
-	if(index6<=0){
-		clear_canvas6();
-	}else{
-		index6 -= 1;
-		restore_array6.pop();
-		context6.putImageData(restore_array6[index6],0,0);
-	}
-}
 
 function erase() {
 	draw_color = 'white';
@@ -412,7 +237,8 @@ function play(){
 	var audio = document.getElementById('audio3');
 	audio.play();
 }
-function pla(){
+
+function play2(){
 	var audio = document.getElementById('audio4');
 	audio.play();
 }

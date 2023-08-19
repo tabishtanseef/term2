@@ -47,7 +47,8 @@ function fill_color(a,b){
 }
 
 function check() {
-	if(big>=23){
+	console.log(big);
+	if(big>=22){
 		var audio = document.getElementById("audio1");
 		audio.play();
 		setTimeout(function(){ 

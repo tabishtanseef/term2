@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>A to Z</title>
+	<link href="styles.css" type="text/css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	<script  src="https://code.jquery.com/jquery-3.6.3.js" ></script>
+</head>
+<body>
+<div class="field">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<h4>
+					<img onclick="play()" src="img/speaker.png" class="speaker" >Say and Trace.
+				</h4>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="mains">
+			<div class="row canvas">
+				<div class="col-md-2" style="margin:auto; text-align:center;">
+					<img src="img/1.png" class="letters" id="1" ><br>
+					<img src="img/0.png" class="letters 2" onclick="go(2)">
+					<img src="img/2.png" class="letters hidden" id="2" ><br>
+					<img src="img/0.png" class="letters 3" onclick="go(3)">
+					<img src="img/3.png" class="letters hidden" id="3" ><br>
+					<img src="img/0.png" class="letters 4" onclick="go(4)">
+					<img src="img/4.png" class="letters hidden" id="4" ><br>
+					<img src="img/0.png" class="letters 5" onclick="go(5)">
+					<img src="img/5.png" class="letters hidden" id="5" ><br>
+					<img src="img/0.png" class="letters 6" onclick="go(6)">
+					<img src="img/6.png" class="letters hidden" id="6" ><br>
+					<img src="img/0.png" class="letters 7" onclick="go(7)">
+					<img src="img/7.png" class="letters hidden" id="7" ><br>
+					<img src="img/0.png" class="letters 8" onclick="go(8)">
+					<img src="img/8.png" class="letters hidden" id="8" ><br>
+					<img src="img/0.png" class="letters 9" onclick="go(9)">
+					<img src="img/9.png" class="letters hidden" id="9" ><br>
+					<img src="img/0.png" class="letters 10" onclick="go(10)">
+					<img src="img/10.png" class="letters hidden" id="10" >
+				</div>
+				<div class="col-md-2" style="margin:auto; text-align:center;">
+					<img src="img/0.png" class="letters 11" onclick="go(11)">
+					<img src="img/11.png" class="letters hidden" id="11" ><br>
+					<img src="img/0.png" class="letters 12" onclick="go(12)">
+					<img src="img/12.png" class="letters hidden" id="12" ><br>
+					<img src="img/0.png" class="letters 13" onclick="go(13)">
+					<img src="img/13.png" class="letters hidden" id="13" ><br>
+					<img src="img/0.png" class="letters 14" onclick="go(14)">
+					<img src="img/14.png" class="letters hidden" id="14" ><br>
+					<img src="img/0.png" class="letters 15" onclick="go(15)">
+					<img src="img/15.png" class="letters hidden" id="15" ><br>
+					<img src="img/0.png" class="letters 16" onclick="go(16)">
+					<img src="img/16.png" class="letters hidden" id="16" ><br>
+					<img src="img/0.png" class="letters 17" onclick="go(17)">
+					<img src="img/17.png" class="letters hidden" id="17" ><br>
+					<img src="img/0.png" class="letters 18" onclick="go(18)">
+					<img src="img/18.png" class="letters hidden" id="18" ><br>
+					<img src="img/0.png" class="letters 19" onclick="go(19)">
+					<img src="img/19.png" class="letters hidden" id="19" ><br>
+					<img src="img/0.png" class="letters 20" onclick="go(20)">
+					<img src="img/20.png" class="letters hidden" id="20" >
+				</div>
+				<div class="col-md-2" style="margin:auto; text-align:center;">
+					<img src="img/0.png" class="letters 21" onclick="go(21)">
+					<img src="img/21.png" class="letters hidden" id="21" ><br>
+					<img src="img/0.png" class="letters 22" onclick="go(22)">
+					<img src="img/22.png" class="letters hidden" id="22" ><br>
+					<img src="img/0.png" class="letters 23" onclick="go(23)">
+					<img src="img/23.png" class="letters hidden" id="23" ><br>
+					<img src="img/0.png" class="letters 24" onclick="go(24)">
+					<img src="img/24.png" class="letters hidden" id="24" ><br>
+					<img src="img/0.png" class="letters 25" onclick="go(25)">
+					<img src="img/25.png" class="letters hidden" id="25" ><br>
+					<img src="img/0.png" class="letters 26" onclick="go(26)">
+					<img src="img/26.png" class="letters hidden" id="26" ><br>
+					<img src="img/0.png" class="letters 27" onclick="go(27)">
+					<img src="img/27.png" class="letters hidden" id="27" ><br>
+					<img src="img/0.png" class="letters 28" onclick="go(28)">
+					<img src="img/28.png" class="letters hidden" id="28" ><br>
+					<img src="img/0.png" class="letters 29" onclick="go(29)">
+					<img src="img/29.png" class="letters hidden" id="29" ><br>
+					<img src="img/0.png" class="letters 30" onclick="go(30)">
+					<img src="img/30.png" class="letters hidden" id="30" >
+				</div>
+				<div class="col-md-2" style="margin:auto; text-align:center;">
+					<img src="img/0.png" class="letters 31" onclick="go(31)">
+					<img src="img/31.png" class="letters hidden" id="31" ><br>
+					<img src="img/0.png" class="letters 32" onclick="go(32)">
+					<img src="img/32.png" class="letters hidden" id="32" ><br>
+					<img src="img/0.png" class="letters 33" onclick="go(33)">
+					<img src="img/33.png" class="letters hidden" id="33" ><br>
+					<img src="img/0.png" class="letters 34" onclick="go(34)">
+					<img src="img/34.png" class="letters hidden" id="34" ><br>
+					<img src="img/0.png" class="letters 35" onclick="go(35)">
+					<img src="img/35.png" class="letters hidden" id="35" ><br>
+					<img src="img/0.png" class="letters 36" onclick="go(36)">
+					<img src="img/36.png" class="letters hidden" id="36" ><br>
+					<img src="img/0.png" class="letters 37" onclick="go(37)">
+					<img src="img/37.png" class="letters hidden" id="37" ><br>
+					<img src="img/0.png" class="letters 38" onclick="go(38)">
+					<img src="img/38.png" class="letters hidden" id="38" ><br>
+					<img src="img/0.png" class="letters 39" onclick="go(39)">
+					<img src="img/39.png" class="letters hidden" id="39" ><br>
+					<img src="img/0.png" class="letters 40" onclick="go(40)">
+					<img src="img/40.png" class="letters hidden" id="40" >
+				</div>
+				<div class="col-md-2" style="margin:auto; text-align:center;">
+					<img src="img/0.png" class="letters 41" onclick="go(41)">
+					<img src="img/41.png" class="letters hidden" id="41" ><br>
+					<img src="img/0.png" class="letters 42" onclick="go(42)">
+					<img src="img/42.png" class="letters hidden" id="42" ><br>
+					<img src="img/0.png" class="letters 43" onclick="go(43)">
+					<img src="img/43.png" class="letters hidden" id="43" ><br>
+					<img src="img/0.png" class="letters 44" onclick="go(44)">
+					<img src="img/44.png" class="letters hidden" id="44" ><br>
+					<img src="img/0.png" class="letters 45" onclick="go(45)">
+					<img src="img/45.png" class="letters hidden" id="45" ><br>
+					<img src="img/0.png" class="letters 46" onclick="go(46)">
+					<img src="img/46.png" class="letters hidden" id="46" ><br>
+					<img src="img/0.png" class="letters 47" onclick="go(47)">
+					<img src="img/47.png" class="letters hidden" id="47" ><br>
+					<img src="img/0.png" class="letters 48" onclick="go(48)">
+					<img src="img/48.png" class="letters hidden" id="48" ><br>
+					<img src="img/0.png" class="letters 49" onclick="go(49)">
+					<img src="img/49.png" class="letters hidden" id="49" ><br>
+					<img src="img/50.png" class="letters" id="50" >
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-4"><center><img id="submit" onclick="check()" src="img/submit.png" disabled="true" style="margin-top:0px; width:40%; opacity:0.5; pointer-events:none;"></center></div>
+				<div class="col-md-4"><center><img id="sol" onclick="solve()" src="img/answer.png" style="margin-top:0px; width:40%;"></center></div>
+				<div class="col-md-4"><center><img id="reset" onclick="window.location.reload()" src="img/reset.png" style="margin-top:0px; width:40%;"></center></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="blocks" style="display:none; margin-top:-100px; z-index:99;">
+	<center><img src="img/Welldone.gif" id="welldone"></center>
+</div>
+<div id="blocks2" style="display:none; margin-top:-100px; z-index:99;">
+	<center><img src="img/TryAgain.gif" style="width:300px;"></center>
+</div>
+<audio src="audio/well-done.mp3" id="audio1"></audio>
+<audio src="audio/try-again.mp3" id="audio2"></audio>
+<audio src="audio/Page-95.mp3" id="audio3"></audio>
+</body>
+<script src="main.js"></script>
+<script>
+var c=2;
+function go(a){
+	if(c==a){
+		$('.'+a).addClass('hidden');
+		$('#'+a).removeClass('hidden');
+		c++;
+	}
+	if(c==50){
+		$('#submit').css("opacity", "1");
+		$('#submit').css("pointer-events", "auto");
+	}
+}
+
+</script>
+</html>

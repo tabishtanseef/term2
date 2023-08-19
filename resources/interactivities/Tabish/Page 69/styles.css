@@ -20,6 +20,13 @@ h4{
 	font-family: "Sehaj Bold";
 	letter-spacing:1px;
 }
+.normal{
+	color:black;
+	font-family: "Sehaj" !important;
+}
+.green{
+	color:#71BF44;
+}
 .let{
 	color:#0166B3;
 }
@@ -106,8 +113,7 @@ input{
 .speaker{
 	width:30px; 
 	height:30px; 
-	margin-right:10px;
-	margin-left:10px;
+	float:right;
 	cursor:pointer;
 }
 .canvas {
